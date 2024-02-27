@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333
+}
+.nav a {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .nav a:after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    top:-1;
+    border-bottom: 2px solid red;
+    transition: width 0.4s ease-in-out;
+    transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  .nav a:hover:after {
+    width: 100%;
+    transition: 0.8s;
+  }
+.page-header, .page-footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-navigation {
+    background-color: #004488;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-navigation a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.academic-programs, .departments, .faculty {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    color: #003366;
+}
+
+p {
+    color: #333333;
+    line-height: 1.6;
+}
+
+.page-footer p {
+    margin: 0;
+}

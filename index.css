@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(32, 32, 32)
+}
+.nav a {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.nav a:after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0%;
+  top:-1;
+  border-bottom: 2px solid red;
+  transition: width 0.4s ease-in-out;
+  transition-delay: 0s;
+  transition-delay: 0s;
+}
+.nav a:hover:after {
+  width: 100%;
+  transition: 0.8s;
+}
+
+.gallery-heading h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  padding: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.slider-container {
+  background-color: #222;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slide-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+.slider-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-nav-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.slider-nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover, .dot.active {
+  background-color: #4CAF50; /* Bright and noticeable color */
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-heading h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .slide {
+      height: 300px; /* Adjust slide height for smaller screens */
+  }
+
+  .slider-nav-btn {
+      padding: 8px 16px; /* Adjust button size for smaller screens */
+      font-size: 0.9rem;
+  }
+}
